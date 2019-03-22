@@ -73,7 +73,7 @@ class MarfeelGraph extends HTMLElement {
         responsive: false,
         maintainAspectRatio: true,
         animation: {
-          duration: 8000
+          duration: 4000
         },
         cutoutPercentage: 90,
         legend: {
