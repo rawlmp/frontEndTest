@@ -37,11 +37,11 @@ class MarfeelGraph extends HTMLElement {
   setColours() {
     switch (this.getType()) {
       case "revenue":
-        return ["rgba(53, 95, 24)", "rgba(142, 209, 76)"];
+        return ["rgb(53, 95, 24)", "rgb(142, 209, 76)"];
       case "impresions":
-        return ["rgba(48, 85, 102)", "rgba(115, 200, 227)"];
+        return ["rgb(48, 85, 102)", "rgb(115, 200, 227)"];
       case "visits":
-        return ["rgba(184, 91, 42)", "rgba(236, 200, 44)"];
+        return ["rgb(184, 91, 42)", "rgb(236, 200, 44)"];
       default:
         return ["black", "grey"];
     }
