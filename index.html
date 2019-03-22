@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Marfeel Test - Raül Martinez</title>
+
+    <link rel="stylesheet" href="src/styles/bulma.css" />
+    <link rel="stylesheet" href="src/styles/style.css" />
+  </head>
+  <body>
+    <div class="container-fluid banner">
+      <img
+        class="logo"
+        src="https://irishtechnews.ie/wp-content/uploads/2015/10/marfeel.png"
+        alt="marfeel logo"
+      />
+      <h1>Javascript Front-End Test</h1>
+    </div>
+
+    <div class="columns is-desktop" id="swipper">
+      <marfeel-graph
+        class="column dragend-page"
+        data-type="revenue"
+      ></marfeel-graph>
+      <marfeel-graph
+        class="column dragend-page"
+        data-type="impresions"
+      ></marfeel-graph>
+      <marfeel-graph
+        class="column dragend-page"
+        data-type="visits"
+      ></marfeel-graph>
+    </div>
+
+    <!-- Templates for every marfeel-graph component -->
+    <template id="htmlTemplate">
+      <div class="graph-wrapper">
+        <canvas id="marfeelChart" width="300" height="300"></canvas>
+        <div id="secondChart">
+          <div class="labels">
+            <p id="type"></p>
+            <p id="total"></p>
+          </div>
+          <canvas id="secondGraph" width="275" height="130"></canvas>
+        </div>
+      </div>
+      <div class="legend">
+        <div class="tablet">
+          <p class="tablet_title"></p>
+          <span class="tablet_pct"></span>
+          <span class="tablet_total"></span>
+        </div>
+        <div class="phone">
+          <p class="phone_title"></p>
+          <span class="phone_pct"></span>
+          <span class="phone_total"></span>
+        </div>
+      </div>
+    </template>
+
+    <template id="cssTemplate">
+      <style>
+        .graph-wrapper {
+          position: relative;
+          display: flex;
+          justify-content: center;
+        }
+        #marfeelChart {
+          margin: auto;
+        }
+        #secondChart {
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          bottom: 25px;
+          z-index: -2;
+          width: 275px;
+          height: 145px;
+        }
+        .labels {
+          position: absolute;
+          bottom: 125px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        #type {
+          font-size: 30px;
+          opacity: 0.4;
+          margin: 0;
+        }
+        #total {
+          font-size: 35px;
+          margin: 0;
+        }
+        .legend {
+          display: flex;
+          justify-content: space-between;
+          padding: 10px;
+          border-bottom: 1px solid grey;
+        }
+        .phone {
+          text-align: end;
+        }
+        .tablet {
+          text-align: start;
+        }
+        .phone_title,
+        .tablet_title {
+          margin: 0;
+        }
+        .phone_pct,
+        .tablet_pct {
+          opacity: 0.8;
+          padding-right: 8px;
+        }
+        .phone_total,
+        .tablet_total {
+          opacity: 0.4;
+        }
+      </style>
+    </template>
+
+    <script src="src/js/swipper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+    <script src="src/js/main.js"></script>
+
+    <script>
+      if (window.innerHeight > window.innerWidth) {
+        let swipper = new Dragend(document.getElementById("swipper"), {
+          disableScroll: true,
+          direction: "horizontal"
+        });
+      }
+    </script>
+  </body>
+</html>

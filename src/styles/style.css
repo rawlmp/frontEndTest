@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.banner {
+  height: 200px;
+  margin-bottom: 40px !important;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #46ae1f, #ffa000, white);
+  background-size: 400% 400%;
+
+  animation: animateBG 14s ease infinite;
+}
+
+@keyframes animateBG {
+  0% {
+    background-position: 0% 100%;
+  }
+  50% {
+    background-position: 100% 5%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+.logo {
+  height: 60px;
+}
+
+marfeel-graph {
+  flex-grow: 1;
+}
+
+.columns {
+  margin: 10px;
+}
