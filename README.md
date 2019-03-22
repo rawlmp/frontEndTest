@@ -22,9 +22,7 @@ The swipper for mobile devices is provided by dragend.js:
 
 > http://stereobit.github.io/dragend/
 
-
 NO bootstrap, NO Vue, NO Angular, NO React, NO Jquery.
-
 
 ## Info
 
@@ -39,7 +37,6 @@ Easily scalable and maintainable.
 
 Due to the requirement to positioning a graph inside the main graph, the style works with position absolute in some elements.
 
-
 ## Testing
 
 After installing required dependencies with:
@@ -50,16 +47,23 @@ To execute the tests (no time to implement more) execute the command:
 
 > npm run test
 
-
 ## Swipper
 
 To use the swipper for mobile devices you have to refresh the page if you are resizing the window from desktop.
 
 A notification provided by bulma advice you to do it.
 
-
 ## One more thing...
 
 You can see the project in a real environment here:
 
 > https://rawlmp.github.io/frontEndTest/
+
+## Time
+
+Total time 5h mol
+
+Creating component and retrieving the data created: 1h
+Testing: 1h
+Fighting with Chart.js: 1h
+Styling: 2h to infinity...
