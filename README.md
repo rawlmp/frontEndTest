@@ -61,9 +61,10 @@ You can see the project in a real environment here:
 
 ## Time
 
-Total time 5h mol
+Total time 5:30h mol
 
-Creating component and retrieving the data created: 1h
+Creating data: 30'
+Creating component: 1h
 Testing: 1h
 Fighting with Chart.js: 1h
 Styling: 2h to infinity...
