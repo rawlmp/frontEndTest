@@ -19,6 +19,9 @@
       <h1>Javascript Front-End Test</h1>
     </div>
 
+    <div class="is-hidden-tablet notification is-primary" id="infoSwipper">
+      Refresh to use the swipper
+    </div>
     <div class="columns is-desktop" id="swipper">
       <marfeel-graph
         class="column dragend-page"
@@ -130,11 +133,13 @@
     <script src="src/js/main.js"></script>
 
     <script>
+      //Activate the swipper for mobile devices
       if (window.innerHeight > window.innerWidth) {
         let swipper = new Dragend(document.getElementById("swipper"), {
           disableScroll: true,
           direction: "horizontal"
         });
+        document.getElementById("infoSwipper").style.display = "none";
       }
     </script>
   </body>
