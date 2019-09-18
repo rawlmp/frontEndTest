@@ -1,5 +1,3 @@
-# Marfeel Front End Test
-
 ## Features
 
 The data is allowed in a github fake rest server using the tool:
@@ -22,7 +20,7 @@ The swipper for mobile devices is provided by dragend.js:
 
 > http://stereobit.github.io/dragend/
 
-NO bootstrap, NO Vue, NO Angular, NO React, NO Jquery.
+NO Bootstrap, NO Vue, NO Angular, NO React, NO Jquery.
 
 ## Info
 
@@ -55,16 +53,6 @@ A notification provided by bulma advice you to do it.
 
 ## One more thing...
 
-You can see the project in a real environment here:
+You can see the project in real environment here:
 
 > https://rawlmp.github.io/frontEndTest/
-
-## Time
-
-Total time 5:30h mol
-
-Creating data: 30'
-Creating component: 1h
-Testing: 1h
-Fighting with Chart.js: 1h
-Styling: 2h to infinity...
